@@ -32,12 +32,12 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
 				</Box>
 			</Flex>
 			<Text fontWeight={600} fontSize={"sm"}>
-				{likes} likes
+				{likes} подобається
 			</Text>
 
 			{isProfilePage && (
 				<Text fontSize='12' color={"gray"}>
-					Posted {timeAgo(post.createdAt)}
+					Опубліковано {timeAgo(post.createdAt)}
 				</Text>
 			)}
 
@@ -51,7 +51,7 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
 					</Text>
 					{post.comments.length > 0 && (
 						<Text fontSize='sm' color={"gray"} cursor={"pointer"} onClick={onOpen}>
-							View all {post.comments.length} comments
+							Подивитись всі {post.comments.length} коментарі
 						</Text>
 					)}
 					{/* COMMENTS MODAL ONLY IN THE HOME PAGE */}
@@ -64,7 +64,7 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
 					<InputGroup>
 						<Input
 							variant={"flushed"}
-							placeholder={"Add a comment..."}
+							placeholder={"Додати коментар..."}
 							fontSize={14}
 							onChange={(e) => setComment(e.target.value)}
 							value={comment}
@@ -80,8 +80,9 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
 								bg={"transparent"}
 								onClick={handleSubmitComment}
 								isLoading={isCommenting}
+								mr={"60px"}
 							>
-								Post
+								Опублікувати
 							</Button>
 						</InputRightElement>
 					</InputGroup>

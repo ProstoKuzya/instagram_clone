@@ -30,7 +30,7 @@ const SuggestedUser = ({ user, setUser }) => {
 						</Box>
 					</Link>
 					<Box fontSize={11} color={"gray.500"}>
-						{user.followers.length} followers
+						{user.followers.length} Читачів
 					</Box>
 				</VStack>
 			</Flex>
@@ -47,7 +47,7 @@ const SuggestedUser = ({ user, setUser }) => {
 					onClick={onFollowUser}
 					isLoading={isUpdating}
 				>
-					{isFollowing ? "Unfollow" : "Follow"}
+					{isFollowing ? "Не стежити" : "Стежити"}
 				</Button>
 			)}
 		</Flex>

@@ -13,7 +13,7 @@ const usePostComment = () => {
 
 	const handlePostComment = async (postId, comment) => {
 		if (isCommenting) return;
-		if (!authUser) return showToast("Error", "You must be logged in to comment", "error");
+		if (!authUser) return showToast("Помилка", "Ви повинні увійти, щоб залишити коментар", "помилка");
 		setIsCommenting(true);
 		const newComment = {
 			comment,
@@ -27,7 +27,7 @@ const usePostComment = () => {
 			});
 			addComment(postId, newComment);
 		} catch (error) {
-			showToast("Error", error.message, "error");
+			showToast("Помилка", error.message, "помилка");
 		} finally {
 			setIsCommenting(false);
 		}

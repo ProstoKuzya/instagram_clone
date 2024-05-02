@@ -11,7 +11,7 @@ const Login = () => {
 	return (
 		<>
 			<Input
-				placeholder='Email'
+				placeholder='Пошта'
 				fontSize={14}
 				type='email'
 				size={"sm"}
@@ -19,7 +19,7 @@ const Login = () => {
 				onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
 			/>
 			<Input
-				placeholder='Password'
+				placeholder='Пароль'
 				fontSize={14}
 				size={"sm"}
 				type='password'
@@ -40,7 +40,7 @@ const Login = () => {
 				isLoading={loading}
 				onClick={() => login(inputs)}
 			>
-				Log in
+				авторизуватися
 			</Button>
 		</>
 	);

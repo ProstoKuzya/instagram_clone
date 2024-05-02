@@ -69,7 +69,7 @@ const useFollowUser = (userId) => {
 				setIsFollowing(true);
 			}
 		} catch (error) {
-			showToast("Error", error.message, "error");
+			showToast("Помилка", error.message, "помилка");
 		} finally {
 			setIsUpdating(false);
 		}

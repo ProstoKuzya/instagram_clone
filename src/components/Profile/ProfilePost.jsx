@@ -39,7 +39,7 @@ const ProfilePost = ({ post }) => {
 	const decrementPostsCount = useUserProfileStore((state) => state.deletePost);
 
 	const handleDeletePost = async () => {
-		if (!window.confirm("Are you sure you want to delete this post?")) return;
+		if (!window.confirm("Ви впевнені, що хочете видалити цю публікацію?")) return;
 		if (isDeleting) return;
 
 		try {
@@ -54,9 +54,9 @@ const ProfilePost = ({ post }) => {
 
 			deletePost(post.id);
 			decrementPostsCount(post.id);
-			showToast("Success", "Post deleted successfully", "success");
+			showToast("Успіх", "Публікацію успішно видалено", "успіх");
 		} catch (error) {
-			showToast("Error", error.message, "error");
+			showToast("Помилка", error.message, "помилка");
 		} finally {
 			setIsDeleting(false);
 		}

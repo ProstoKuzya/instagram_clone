@@ -31,7 +31,7 @@ const useGetSuggestedUsers = () => {
 
 				setSuggestedUsers(users);
 			} catch (error) {
-				showToast("Error", error.message, "error");
+				showToast("Помилка", error.message, "помилка");
 			} finally {
 				setIsLoading(false);
 			}

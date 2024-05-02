@@ -14,7 +14,7 @@ const GoogleAuth = ({ prefix }) => {
 		try {
 			const newUser = await signInWithGoogle();
 			if (!newUser && error) {
-				showToast("Error", error.message, "error");
+				showToast("Помилка", error.message, "помилка");
 				return;
 			}
 			const userRef = doc(firestore, "users", newUser.user.uid);
@@ -52,7 +52,7 @@ const GoogleAuth = ({ prefix }) => {
 		<Flex alignItems={"center"} justifyContent={"center"} cursor={"pointer"} onClick={handleGoogleAuth}>
 			<Image src='/google.png' w={5} alt='Google logo' />
 			<Text mx='2' color={"blue.500"}>
-				{prefix} with Google
+				{prefix} з Google
 			</Text>
 		</Flex>
 	);

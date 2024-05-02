@@ -39,7 +39,7 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
 		<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
 			<ModalOverlay />
 			<ModalContent bg={"black"} border={"1px solid gray"} maxW={"400px"}>
-				<ModalHeader>Comments</ModalHeader>
+				<ModalHeader>Коментарі</ModalHeader>
 				<ModalCloseButton />
 				<ModalBody pb={6}>
 					<Flex
@@ -55,10 +55,10 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
 						))}
 					</Flex>
 					<form onSubmit={handleSubmitComment} style={{ marginTop: "2rem" }}>
-						<Input placeholder='Comment' size={"sm"} ref={commentRef} />
+						<Input placeholder='Коментарі' size={"sm"} ref={commentRef} />
 						<Flex w={"full"} justifyContent={"flex-end"}>
 							<Button type='submit' ml={"auto"} size={"sm"} my={4} isLoading={isCommenting}>
-								Post
+								Опублікувати
 							</Button>
 						</Flex>
 					</form>

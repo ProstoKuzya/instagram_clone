@@ -11,7 +11,7 @@ const useLogin = () => {
 
 	const login = async (inputs) => {
 		if (!inputs.email || !inputs.password) {
-			return showToast("Error", "Please fill all the fields", "error");
+			return showToast("Помилка", "Будь ласка, заповніть усі поля", "помилка");
 		}
 		try {
 			const userCred = await signInWithEmailAndPassword(inputs.email, inputs.password);
@@ -23,7 +23,7 @@ const useLogin = () => {
 				loginUser(docSnap.data());
 			}
 		} catch (error) {
-			showToast("Error", error.message, "error");
+			showToast("Помилка", error.message, "помилка");
 		}
 	};
 

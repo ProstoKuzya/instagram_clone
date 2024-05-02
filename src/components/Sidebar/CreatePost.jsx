@@ -44,7 +44,7 @@ const CreatePost = () => {
 			setCaption("");
 			setSelectedFile(null);
 		} catch (error) {
-			showToast("Error", error.message, "error");
+			showToast("Помилка", error.message, "помилка");
 		}
 	};
 
@@ -69,7 +69,7 @@ const CreatePost = () => {
 					onClick={onOpen}
 				>
 					<CreatePostLogo />
-					<Box display={{ base: "none", md: "block" }}>Create</Box>
+					<Box display={{ base: "none", md: "block" }}>Створити</Box>
 				</Flex>
 			</Tooltip>
 
@@ -77,11 +77,11 @@ const CreatePost = () => {
 				<ModalOverlay />
 
 				<ModalContent bg={"black"} border={"1px solid gray"}>
-					<ModalHeader>Create Post</ModalHeader>
+					<ModalHeader>Створити публікацію</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pb={6}>
 						<Textarea
-							placeholder='Post caption...'
+							placeholder='Підпис до публікації...'
 							value={caption}
 							onChange={(e) => setCaption(e.target.value)}
 						/>
@@ -110,7 +110,7 @@ const CreatePost = () => {
 
 					<ModalFooter>
 						<Button mr={3} onClick={handlePostCreation} isLoading={isLoading}>
-							Post
+							Опублікувати
 						</Button>
 					</ModalFooter>
 				</ModalContent>
@@ -132,7 +132,7 @@ function useCreatePost() {
 
 	const handleCreatePost = async (selectedFile, caption) => {
 		if (isLoading) return;
-		if (!selectedFile) throw new Error("Please select an image");
+		if (!selectedFile) throw new Error("Виберіть зображення");
 		setIsLoading(true);
 		const newPost = {
 			caption: caption,
@@ -159,9 +159,9 @@ function useCreatePost() {
 
 			if (pathname !== "/" && userProfile.uid === authUser.uid) addPost({ ...newPost, id: postDocRef.id });
 
-			showToast("Success", "Post created successfully", "success");
+			showToast("Успіх", "Публікацію створено успішно", "успіх");
 		} catch (error) {
-			showToast("Error", error.message, "error");
+			showToast("Помилка", error.message, "помилка");
 		} finally {
 			setIsLoading(false);
 		}

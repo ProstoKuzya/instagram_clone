@@ -9,12 +9,12 @@ const Navbar = () => {
 				<Flex gap={4}>
 					<Link to='/auth'>
 						<Button colorScheme={"blue"} size={"sm"}>
-							Login
+							Логін
 						</Button>
 					</Link>
 					<Link to='/auth'>
 						<Button variant={"outline"} size={"sm"}>
-							Signup
+							Реєстрація
 						</Button>
 					</Link>
 				</Flex>

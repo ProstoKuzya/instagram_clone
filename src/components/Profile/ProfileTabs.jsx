@@ -15,7 +15,7 @@ const ProfileTabs = () => {
 					<BsGrid3X3 />
 				</Box>
 				<Text fontSize={12} display={{ base: "none", sm: "block" }}>
-					Posts
+					Пости
 				</Text>
 			</Flex>
 
@@ -24,7 +24,7 @@ const ProfileTabs = () => {
 					<BsBookmark />
 				</Box>
 				<Text fontSize={12} display={{ base: "none", sm: "block" }}>
-					Saved
+					Збережено
 				</Text>
 			</Flex>
 
@@ -33,7 +33,7 @@ const ProfileTabs = () => {
 					<BsSuitHeart fontWeight={"bold"} />
 				</Box>
 				<Text fontSize={12} display={{ base: "none", sm: "block" }}>
-					Likes
+					Позначено
 				</Text>
 			</Flex>
 		</Flex>

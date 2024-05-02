@@ -16,7 +16,7 @@ const Signup = () => {
 	return (
 		<>
 			<Input
-				placeholder='Email'
+				placeholder='Пошта'
 				fontSize={14}
 				type='email'
 				size={"sm"}
@@ -24,7 +24,7 @@ const Signup = () => {
 				onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
 			/>
 			<Input
-				placeholder='Username'
+				placeholder="Ім'я"
 				fontSize={14}
 				type='text'
 				size={"sm"}
@@ -32,7 +32,7 @@ const Signup = () => {
 				onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
 			/>
 			<Input
-				placeholder='Full Name'
+				placeholder="Повне ім'я"
 				fontSize={14}
 				type='text'
 				size={"sm"}
@@ -41,7 +41,7 @@ const Signup = () => {
 			/>
 			<InputGroup>
 				<Input
-					placeholder='Password'
+					placeholder='Пароль'
 					fontSize={14}
 					type={showPassword ? "text" : "password"}
 					value={inputs.password}
@@ -70,7 +70,7 @@ const Signup = () => {
 				isLoading={loading}
 				onClick={() => signup(inputs)}
 			>
-				Sign Up
+				Зареєструватися
 			</Button>
 		</>
 	);
