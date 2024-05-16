@@ -32,7 +32,7 @@ const SuggestedHeader = () => {
 				isLoading={isLoggingOut}
 				cursor={"pointer"}
 			>
-				Перейти
+				Вийти
 			</Button>
 		</Flex>
 	);
